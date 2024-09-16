@@ -1,0 +1,44 @@
+syntax = "proto3";
+
+service Calculator {
+  rpc Add (AddRequest) returns (AddResponse);
+  rpc Subtract (SubtractRequest) returns (SubtractResponse);
+  rpc Multiply (MultiplyRequest) returns (MultiplyResponse);
+  rpc Divide (DivideRequest) returns (DivideResponse);
+}
+
+message AddRequest {
+  float num1 = 1;
+  float num2 = 2;
+}
+
+message AddResponse {
+  float result = 1;
+}
+
+message SubtractRequest {
+  float num1 = 1;
+  float num2 = 2;
+}
+
+message SubtractResponse {
+  float result = 1;
+}
+
+message MultiplyRequest {
+  float num1 = 1;
+  float num2 = 2;
+}
+
+message MultiplyResponse {
+  float result = 1;
+}
+
+message DivideRequest {
+  float num1 = 1;
+  float num2 = 2;
+}
+
+message DivideResponse {
+  float result = 1;
+}
